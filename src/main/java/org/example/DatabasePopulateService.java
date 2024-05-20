@@ -13,6 +13,6 @@ public class DatabasePopulateService {
         Connection connection = Database.getInstance().getConnection();
         String sql = new String(Files.readAllBytes(Path.of(sqlFilePath)));
         Statement statement = connection.createStatement();
-        statement.executeUpdate(sql);
+        statement.execute(sql);
     }
 }
